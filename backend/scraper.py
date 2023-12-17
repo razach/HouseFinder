@@ -8,20 +8,26 @@ from datetime import datetime
 
 
 from boiler_plate import *
-from Search_param import *
+# Contains the basic query for the API call
 
-def scraper(listing_type):
+from Search_param import *
+# Contains the user parameters for the API call
+
+def scraper(listing_type, *args, **kwargs):
+# Calls the get_listing function imported from the call_api module, passing in the listing_type argument. This will call the API and return a dataframe.
     if listing_type == 'for_rent':
         return get_listing(headers=headers, url=url, apistring=apistring, base_query=for_rent_query, userparams=user_param_for_rent)
     elif listing_type == 'for_sale':
         return get_listing(headers=headers, url=url, apistring=apistring, base_query=for_sale_query, userparams=user_param_for_sale)
-    elif listing_type == 'schools':
-        return get_schools()
+    elif listing_type == 'get_schools':
+        listing_id_param = kwargs.get('listing_id_param')
+        return get_schools(headers=school_header, url=school_url, apistring=apistring, school_query=school_query, userparams = listing_id_param)
     else:
         return None
     
 def get_listing(headers, url, apistring, base_query, userparams):
-
+# This is the heart of the program. It takes the headers, url, apistring, base_query, and userparams as arguments. It then uses the requests module to make the API call.
+    
     # Initialize the results list
     results = []
 
@@ -81,5 +87,31 @@ def get_listing(headers, url, apistring, base_query, userparams):
     return results
 
 
-def get_schools():
-    pass
+def get_schools(headers, url, apistring, school_query, userparams):
+    
+    VARIABLES = {
+            "propertyId": userparams
+        }
+    
+    payload = {
+        "query": school_query,
+    "variables": VARIABLES
+    }
+
+    try:
+        response = requests.request(
+            "POST", url, json=payload, headers=headers, params=apistring)
+        data = response.json()
+    except:
+        return 'ERROR'
+
+    if data is None:
+        return ''
+    else:
+        schools = data['data']['home']['schools']['schools']
+
+        df = pd.DataFrame([school for school in schools if school['assigned']])
+        # df = pd.DataFrame([school for school in schools if school['assigned']],columns=['name', 'education_level','rating'])
+
+        return df
+

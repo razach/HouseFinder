@@ -356,6 +356,17 @@ for_rent_query = """
 
 school_url = "https://www.realtor.com/api/v1/hulk"
 
+school_header = {
+            "authority": "www.realtor.com",
+            "accept": "*/*",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "sec-gpc": "1",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+        }
+
 school_query = """
     query GetLocalData($propertyId: ID!) {
         home(property_id: $propertyId) {
