@@ -1,0 +1,71 @@
+slug_id,id,name,education_levels,distance_in_miles,student_teacher_ratio,rating,grades,funding_type,student_count,review_count,parent_rating,assigned
+Washington-Liberty-High-School-0772859031,0772859031,Washington Liberty High School,['high'],0.6,13.2,5.0,"['9', '10', '11', '12']",public,2482.0,10,5,True
+Dorothy-Hamm-Middle-0772967701,0772967701,Dorothy Hamm Middle,"['elementary', 'middle', 'high']",1.2,,,,public,,5,3,True
+Oak-View-Elementary-School-0772865031,0772865031,Oak View Elementary School,['elementary'],0.9,15.8,8.0,"['K', '1', '2', '3', '4', '5', '6']",public,827.0,14,5,True
+Woodson-High-School-0772865651,0772865651,Woodson High School,['high'],2.1,15.0,6.0,"['9', '10', '11', '12']",public,2410.0,19,4,True
+Frost-Middle-School-0772864151,0772864151,Frost Middle School,['middle'],2.1,14.1,7.0,"['7', '8']",public,1238.0,16,3,True
+Kent-Gardens-Elementary-School-0772864561,0772864561,Kent Gardens Elementary School,['elementary'],0.4,17.8,9.0,"['K', '1', '2', '3', '4', '5', '6']",public,996.0,20,3,True
+Longfellow-Middle-School-0772864811,0772864811,Longfellow Middle School,['middle'],0.6,16.7,8.0,"['7', '8']",public,1318.0,21,3,True
+Mclean-High-School-0772864921,0772864921,Mclean High School,['high'],0.9,17.3,7.0,"['9', '10', '11', '12']",public,2275.0,20,4,True
+Ashlawn-Elementary-School-0772858721,0772858721,Ashlawn Elementary School,['elementary'],0.4,13.4,7.0,"['K', '1', '2', '3', '4', '5']",public,772.0,13,4,True
+Kenmore-Middle-School-0772858861,0772858861,Kenmore Middle School,['middle'],0.5,11.9,4.0,"['6', '7', '8']",public,1002.0,17,4,True
+Yorktown-High-School-0772859051,0772859051,Yorktown High School,['high'],2.4,15.1,6.0,"['9', '10', '11', '12']",public,2308.0,24,4,True
+North-Springfield-Elementary-School-0772865021,0772865021,North Springfield Elementary School,['elementary'],0.3,11.1,4.0,"['K', '1', '2', '3', '4', '5']",public,496.0,9,5,True
+Annandale-High-School-0772863561,0772863561,Annandale High School,['high'],1.8,13.5,2.0,"['9', '10', '11', '12']",public,2240.0,13,4,True
+Holmes-Middle-School-0772864451,0772864451,Holmes Middle School,['middle'],2.7,12.0,4.0,"['6', '7', '8']",public,962.0,7,3,True
+Mantua-Elementary-School-0772864861,0772864861,Mantua Elementary School,['elementary'],1.5,17.0,7.0,"['K', '1', '2', '3', '4', '5', '6']",public,1086.0,16,4,True
+James-K-Polk-Elementary-School-0772858151,0772858151,James K Polk Elementary School,['elementary'],0.5,12.5,4.0,"['K', '1', '2', '3', '4', '5']",public,795.0,17,5,True
+Francis-C-Hammond-Middle-0772858121,0772858121,Francis C Hammond Middle,['middle'],0.9,9.7,2.0,"['6', '7', '8']",public,1478.0,20,3,True
+Alexandria-City-High-School-0772858261,0772858261,Alexandria City High School,['high'],2.1,10.0,2.0,"['9', '10', '11', '12']",public,3985.0,89,5,True
+Weyanoke-Elementary-School-0772865561,0772865561,Weyanoke Elementary School,['elementary'],0.7,11.0,2.0,"['K', '1', '2', '3', '4', '5']",public,553.0,11,3,True
+Cherry-Run-Elementary-School-0772866011,0772866011,Cherry Run Elementary School,['elementary'],0.2,11.8,7.0,"['K', '1', '2', '3', '4', '5', '6']",public,435.0,20,4,True
+Lake-Braddock-Secondary-0772864661,0772864661,Lake Braddock Secondary,"['middle', 'high']",2.9,15.9,7.0,"['7', '8', '9', '10', '11', '12']",public,4287.0,26,4,True
+Swanson-Middle-School-0772858951,0772858951,Swanson Middle School,['middle'],0.2,14.5,7.0,"['6', '7', '8']",public,1328.0,6,4,True
+McKinley-Elementary-School-0772858911,0772858911,McKinley Elementary School,['elementary'],0.6,15.8,7.0,"['K', '1', '2', '3', '4', '5']",public,791.0,17,4,True
+Chesterbrook-Elementary-School-0772863761,0772863761,Chesterbrook Elementary School,['elementary'],0.7,15.2,9.0,"['K', '1', '2', '3', '4', '5', '6']",public,694.0,22,4,True
+Crestwood-Elementary-School-0772863851,0772863851,Crestwood Elementary School,['elementary'],0.4,12.4,4.0,"['K', '1', '2', '3', '4', '5', '6']",public,612.0,8,5,True
+John-R.-Lewis-High-School-0772864741,0772864741,John R. Lewis High School,['high'],1.4,12.6,3.0,"['9', '10', '11', '12']",public,1765.0,19,4,True
+Key-Middle-School-0772864611,0772864611,Key Middle School,['middle'],1.8,11.3,3.0,"['7', '8']",public,799.0,7,4,True
+Glebe-Elementary-School-0772858801,0772858801,Glebe Elementary School,['elementary'],0.3,14.4,8.0,"['K', '1', '2', '3', '4', '5']",public,586.0,10,5,True
+Nottingham-Elementary-School-0772858921,0772858921,Nottingham Elementary School,['elementary'],0.1,16.0,8.0,"['K', '1', '2', '3', '4', '5']",public,499.0,28,3,True
+Williamsburg-Middle-School-0772859041,0772859041,Williamsburg Middle School,['middle'],0.7,13.5,9.0,"['6', '7', '8']",public,1379.0,16,4,True
+Dr.-Charles-R.-Drew-Elementary-0772858751,0772858751,Dr. Charles R. Drew Elementary,['elementary'],0.2,12.5,4.0,"['K', '1', '2', '3', '4', '5']",public,673.0,10,4,True
+Wakefield-High-School-0772859021,0772859021,Wakefield High School,['high'],1.0,12.5,4.0,"['9', '10', '11', '12']",public,2339.0,20,4,True
+Gunston-Middle-School-0772859061,0772859061,Gunston Middle School,['middle'],1.1,13.0,5.0,"['6', '7', '8']",public,1063.0,12,4,True
+Shrevewood-Elementary-School-0772865231,0772865231,Shrevewood Elementary School,['elementary'],0.6,15.2,5.0,"['K', '1', '2', '3', '4', '5', '6']",public,774.0,26,4,True
+Kilmer-Middle-School-0772864631,0772864631,Kilmer Middle School,['middle'],1.5,15.5,6.0,"['7', '8']",public,1136.0,24,4,True
+Marshall-High-School-0772864901,0772864901,Marshall High School,['high'],1.5,15.5,6.0,"['9', '10', '11', '12']",public,2254.0,25,4,True
+Irving-Middle-School-0772864521,0772864521,Irving Middle School,['middle'],0.2,16.0,7.0,"['7', '8']",public,1100.0,17,3,True
+West-Springfield-Elementary-School-0772865501,0772865501,West Springfield Elementary School,['elementary'],0.7,14.0,8.0,"['K', '1', '2', '3', '4', '5', '6']",public,520.0,20,4,True
+West-Springfield-High-School-0772865511,0772865511,West Springfield High School,['high'],1.0,16.9,9.0,"['9', '10', '11', '12']",public,2310.0,14,4,True
+Barcroft-Elementary-School-0772858731,0772858731,Barcroft Elementary School,['elementary'],0.8,9.5,5.0,"['K', '1', '2', '3', '4', '5']",public,434.0,7,5,True
+Westlawn-Elementary-School-0772865541,0772865541,Westlawn Elementary School,['elementary'],0.4,12.1,3.0,"['K', '1', '2', '3', '4', '5', '6']",public,812.0,13,5,True
+Falls-Church-High-School-0772864011,0772864011,Falls Church High School,['high'],0.9,12.9,2.0,"['9', '10', '11', '12']",public,2111.0,29,4,True
+Jackson-Middle-School-0772864831,0772864831,Jackson Middle School,['middle'],2.1,14.2,5.0,"['7', '8']",public,1117.0,17,4,True
+Bailey's-Elementary-School-for-the-Arts-and-Sciences-0772863611,0772863611,Bailey's Elementary School for the Arts and Sciences,['elementary'],0.2,12.0,,"['K', '1', '2']",public,762.0,20,4,True
+Justice-High-School-0772864531,0772864531,Justice High School,['high'],0.7,13.2,2.0,"['9', '10', '11', '12']",public,2241.0,11,4,True
+Glasgow-Middle-School-0772864201,0772864201,Glasgow Middle School,['middle'],0.8,12.4,4.0,"['6', '7', '8']",public,1817.0,24,3,True
+Flint-Hill-Elementary-School-0772864021,0772864021,Flint Hill Elementary School,['elementary'],0.9,16.3,8.0,"['K', '1', '2', '3', '4', '5', '6']",public,688.0,18,4,True
+Madison-High-School-0772864851,0772864851,Madison High School,['high'],1.2,15.6,6.0,"['9', '10', '11', '12']",public,2225.0,22,4,True
+Thoreau-Middle-School-0772865361,0772865361,Thoreau Middle School,['middle'],3.2,14.9,6.0,"['7', '8']",public,1210.0,6,3,True
+Greenbriar-East-Elementary-School-0772864251,0772864251,Greenbriar East Elementary School,['elementary'],0.4,14.7,5.0,"['K', '1', '2', '3', '4', '5', '6']",public,922.0,27,3,True
+Chantilly-High-School-0772863461,0772863461,Chantilly High School,['high'],1.1,13.6,7.0,"['9', '10', '11', '12']",public,2863.0,15,4,True
+Rocky-Run-Middle-School-0772865941,0772865941,Rocky Run Middle School,['middle'],1.2,16.5,9.0,"['7', '8']",public,1281.0,16,4,True
+Mason-Crest-Elementary-School-0772933311,0772933311,Mason Crest Elementary School,['elementary'],1.1,11.5,4.0,"['K', '1', '2', '3', '4', '5']",public,581.0,13,5,True
+Oak-Street-Elementary-School-0772866441,0772866441,Oak Street Elementary School,['elementary'],1.6,14.5,8.0,"['2', '3', '4', '5']",public,781.0,14,5,True
+Meridian-High-School-0772866421,0772866421,Meridian High School,['high'],2.4,11.5,7.0,"['9', '10', '11', '12']",public,825.0,11,4,True
+Mary-Ellen-Henderson-Middle-School-0772866431,0772866431,Mary Ellen Henderson Middle School,['middle'],2.4,12.5,8.0,"['6', '7', '8']",public,599.0,10,3,True
+Daniels-Run-Elementary-School-0772893401,0772893401,Daniels Run Elementary School,['elementary'],0.6,13.0,5.0,"['K', '1', '2', '3', '4', '5', '6']",public,714.0,20,4,True
+Johnson-Middle-School-0772864711,0772864711,Johnson Middle School,['middle'],1.2,14.5,6.0,"['7', '8']",public,1012.0,9,3,True
+Fairfax-High-School-0772863931,0772863931,Fairfax High School,['high'],1.3,15.3,6.0,"['9', '10', '11', '12']",public,2325.0,10,4,True
+Jefferson-Middle-School-0772858851,0772858851,Jefferson Middle School,['middle'],0.6,12.0,5.0,"['6', '7', '8']",public,1187.0,11,5,True
+Henry-Elementary-School-0772858821,0772858821,Henry Elementary School,['elementary'],0.7,12.5,6.0,"['K', '1', '2', '3', '4', '5']",public,636.0,9,5,True
+Oakton-Elementary-School-0772865041,0772865041,Oakton Elementary School,['elementary'],2.9,14.9,8.0,"['K', '1', '2', '3', '4', '5', '6']",public,799.0,14,4,True
+Mt.-Daniel-School-0772866451,0772866451,Mt. Daniel School,['elementary'],0.4,11.6,,"['K', '1']",public,345.0,10,5,True
+Newington-Forest-Elementary-School-0772866021,0772866021,Newington Forest Elementary School,['elementary'],0.1,16.0,6.0,"['K', '1', '2', '3', '4', '5', '6']",public,522.0,22,4,True
+South-County-Middle-School-0772933901,0772933901,South County Middle School,['middle'],1.3,15.4,7.0,"['7', '8']",public,1090.0,18,3,True
+South-County-High-School-0772903241,0772903241,South County High School,['high'],1.6,16.1,6.0,"['9', '10', '11', '12']",public,2251.0,26,3,True
+Laurel-Ridge-Elementary-School-0772864721,0772864721,Laurel Ridge Elementary School,['elementary'],0.5,13.4,7.0,"['K', '1', '2', '3', '4', '5', '6']",public,875.0,11,4,True
+Robinson-Secondary-0772865201,0772865201,Robinson Secondary,"['middle', 'high']",0.8,16.5,8.0,"['7', '8', '9', '10', '11', '12']",public,3818.0,14,5,True
+Lemon-Road-Elementary-School-0772864751,0772864751,Lemon Road Elementary School,['elementary'],0.4,14.9,7.0,"['K', '1', '2', '3', '4', '5', '6']",public,601.0,18,4,True
+Jamestown-Elementary-School-0772858841,0772858841,Jamestown Elementary School,['elementary'],0.4,12.8,9.0,"['K', '1', '2', '3', '4', '5']",public,602.0,27,4,True

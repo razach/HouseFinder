@@ -84,7 +84,8 @@ def get_listing(headers, url, apistring, base_query, userparams):
             break
 
     print("Done!")
-    return results
+    df = pd.DataFrame(results)
+    return df
 
 
 def get_schools(headers, url, apistring, school_query, userparams):
@@ -109,7 +110,6 @@ def get_schools(headers, url, apistring, school_query, userparams):
         return ''
     else:
         schools = data['data']['home']['schools']['schools']
-
         df = pd.DataFrame([school for school in schools if school['assigned']])
         # df = pd.DataFrame([school for school in schools if school['assigned']],columns=['name', 'education_level','rating'])
 
