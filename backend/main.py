@@ -20,26 +20,36 @@ property_id_dict = {}
 
 # %%
 # Get the rentals and store in a csv for further processing
-rentals = scraper('for_rent')
+rentals_new_pull = scraper('for_rent')
 
 # Add the current date and time column as 'pull date' column to rentals
-rentals['pull_date'] = datetime.now()
+rentals_new_pull['pull_date'] = datetime.now()
 
-#store the rentals in a csv
+# Append the rentals_new_pull dataframe to the rentals dataframe
+rentals = pd.concat([rentals, rentals_new_pull], ignore_index=True)
+
+#store the rentals in a csv.
 rentals.to_csv('rentals.csv', index=False)
 
 # %%
 
-# Eventually we need to replace this to read in the initial list of schools.
-big_list_of_schools = pd.DataFrame()
+# Read in the initial list of schools from big_list_of_schools.csv
+# big_list_of_schools = pd.DataFrame()
+big_list_of_schools = pd.read_csv('big_list_of_schools.csv')
+
 # Create set to store unique school slug ids
 unique_schools = set()
 # Need to add this in once we start reading in the big list of schools.
-# unique_schools.add(big_list_of_schools['slug_id'])
+for slug_id in big_list_of_schools['slug_id']:
+    unique_schools.add(slug_id)
+# unique_schools.add(list(big_list_of_schools['slug_id']))
+
+# Create dictionary to store property_id as key and list of school slug ids as value
+property_id_dict = {}
 
 
-for i, property_id in enumerate(rentals['property_id']):
-    print(f"handling {i} of {len(rentals)}", end='\r')
+for i, property_id in enumerate(rentals_new_pull['property_id']):
+    print(f"handling {i} of {len(rentals_new_pull)}", end='\r')
     print(f"Running id number {property_id}")
     
     # Call scraper function with listing_id parameter to pull back ASSIGNED schools
@@ -66,11 +76,14 @@ for i, property_id in enumerate(rentals['property_id']):
 # %%
 # Save the big list of schools to a csv file.
 big_list_of_schools.to_csv('big_list_of_schools.csv', index=True)
-# %%
-# Append the property_id_dict back into the rentals dataframe
-rentals = rentals.set_index('property_id')
-rentals['school_ids'] = rentals.index.map(property_id_dict)
 
 # %%
-# Save rentals back to csv
-rentals.to_csv('rentals_with_schools.csv', index=False)
+# Append the property_id_dict back into the rentals_new_pull dataframe
+rentals_new_pull = rentals_new_pull.set_index('property_id')
+rentals_new_pull['school_ids'] = rentals_new_pull.index.map(property_id_dict)
+
+# %%
+# Append results to the end of rentals_with_schools.csv
+rentals_with_schools = pd.read_csv('rentals_with_schools.csv')
+rentals_with_schools = pd.concat([rentals_with_schools, rentals_new_pull], ignore_index=True)
+rentals_with_schools.to_csv('rentals_with_schools.csv', index=False)
