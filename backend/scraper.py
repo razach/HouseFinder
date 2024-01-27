@@ -7,10 +7,10 @@ import json
 from datetime import datetime
 
 
-from boiler_plate import *
+from .boiler_plate import *
 # Contains the basic query for the API call
 
-from Search_param import *
+from .Search_param import *
 # Contains the user parameters for the API call
 
 def scraper(listing_type, *args, **kwargs):
