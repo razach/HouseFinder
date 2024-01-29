@@ -210,16 +210,17 @@ def import_to_db(rentals_filepath, schools_filepath):
     # Add in three columns called 'elementary school rating', 'middle school rating', and 'high school rating' to the rentals_base_table dataframe.
     # Match on the school slig_id stored in the rentals_with_schools dataframe.
 
-    elementary_school_rating = []
-    middle_school_rating = []
-    high_school_rating = []
-
     for i, row in rentals_with_schools.iterrows():
         try:
             school_slugs = ast.literal_eval(row['school_ids'])
         except:
             school_slugs = []
         
+        # Reinitialize School rating lists
+        elementary_school_rating = []
+        middle_school_rating = []
+        high_school_rating = []
+
         #print(school_slugs)
         for school_slug in school_slugs:
             if school_slug is not None:

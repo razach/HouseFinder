@@ -93,13 +93,13 @@ Hardy-Middle-School-0715716351,715716351,Hardy Middle School,['middle'],12.6,8.0
 Key-Elementary-School-0715716221,715716221,Key Elementary School,['elementary'],14.3,9.0,"['K', '1', '2', '3', '4', '5']",public,399.0,11,4,True
 Wilson-High-School-0715715761,715715761,Wilson High School,['high'],16.0,9.0,"['9', '10', '11', '12']",public,1796.0,8,4,True
 Poe-Middle-School-0772865131,772865131,Poe Middle School,['middle'],11.1,3.0,"['6', '7', '8']",public,917.0,9,4,True
-Taylor-Elementary-School-0772858961,0772858961,Taylor Elementary School,['elementary'],13.2,7.0,"['K', '1', '2', '3', '4', '5']",public,618.0,20,4,True
-Mosby-Woods-Elementary-School-0772864931,0772864931,Mosby Woods Elementary School,['elementary'],15.0,6.0,"['K', '1', '2', '3', '4', '5', '6']",public,966.0,25,4,True
-Cardinal-Elementary-School-0772858911,0772858911,Cardinal Elementary School,['elementary'],15.8,7.0,"['K', '1', '2', '3', '4', '5']",public,682.0,19,4,True
-Braddock-Elementary-School-0772863641,0772863641,Braddock Elementary School,['elementary'],12.2,2.0,"['K', '1', '2', '3', '4', '5']",public,819.0,15,3,True
-Randolph-Elementary-School-0772858701,0772858701,Randolph Elementary School,['elementary'],11.9,4.0,"['K', '1', '2', '3', '4', '5']",public,436.0,11,5,True
-Canterbury-Woods-Elementary-School-0772863741,0772863741,Canterbury Woods Elementary School,['elementary'],15.6,7.0,"['K', '1', '2', '3', '4', '5', '6']",public,777.0,17,4,True
-Carlin-Springs-Elementary-School-0772858811,0772858811,Carlin Springs Elementary School,['elementary'],12.0,3.0,"['K', '1', '2', '3', '4', '5']",public,570.0,7,4,True
-Jackson-Reed-High-School-0715715761,0715715761,Jackson-Reed High School,['high'],16.0,9.0,"['9', '10', '11', '12']",public,1951.0,8,4,True
-Woodburn-Elementary-School-0772865621,0772865621,Woodburn Elementary School,['elementary'],12.4,2.0,"['K', '1', '2', '3', '4', '5', '6']",public,503.0,5,4,True
-Long-Branch-Elementary-School-0772858901,0772858901,Long Branch Elementary School,['elementary'],13.0,5.0,"['K', '1', '2', '3', '4', '5']",public,444.0,11,5,True
+Taylor-Elementary-School-0772858961,772858961,Taylor Elementary School,['elementary'],13.2,7.0,"['K', '1', '2', '3', '4', '5']",public,618.0,20,4,True
+Mosby-Woods-Elementary-School-0772864931,772864931,Mosby Woods Elementary School,['elementary'],15.0,6.0,"['K', '1', '2', '3', '4', '5', '6']",public,966.0,25,4,True
+Cardinal-Elementary-School-0772858911,772858911,Cardinal Elementary School,['elementary'],15.8,7.0,"['K', '1', '2', '3', '4', '5']",public,682.0,19,4,True
+Braddock-Elementary-School-0772863641,772863641,Braddock Elementary School,['elementary'],12.2,2.0,"['K', '1', '2', '3', '4', '5']",public,819.0,15,3,True
+Randolph-Elementary-School-0772858701,772858701,Randolph Elementary School,['elementary'],11.9,4.0,"['K', '1', '2', '3', '4', '5']",public,436.0,11,5,True
+Canterbury-Woods-Elementary-School-0772863741,772863741,Canterbury Woods Elementary School,['elementary'],15.6,7.0,"['K', '1', '2', '3', '4', '5', '6']",public,777.0,17,4,True
+Carlin-Springs-Elementary-School-0772858811,772858811,Carlin Springs Elementary School,['elementary'],12.0,3.0,"['K', '1', '2', '3', '4', '5']",public,570.0,7,4,True
+Jackson-Reed-High-School-0715715761,715715761,Jackson-Reed High School,['high'],16.0,9.0,"['9', '10', '11', '12']",public,1951.0,8,4,True
+Woodburn-Elementary-School-0772865621,772865621,Woodburn Elementary School,['elementary'],12.4,2.0,"['K', '1', '2', '3', '4', '5', '6']",public,503.0,5,4,True
+Long-Branch-Elementary-School-0772858901,772858901,Long Branch Elementary School,['elementary'],13.0,5.0,"['K', '1', '2', '3', '4', '5']",public,444.0,11,5,True

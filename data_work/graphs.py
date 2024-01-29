@@ -6,15 +6,18 @@ import sqlalchemy as db
 
 # %%
 
+# Use sqlalchemy to read in the SQLite database stored at 'sqlite:///data_work/rentals.db'
+
 engine = db.create_engine('sqlite:///rentals.db')
 
 conn = engine.connect()
-metadata = db.MetaData()
+
 
 # %%
 
 # Read in rentals.db SQLLite into a pandas dataframe
 rentals_base_table = pd.read_sql_table('rentals', conn)
+rentals_base_table.set_index('listing_id', inplace=True)
 
 # %%
 rentals_base_table.head()
