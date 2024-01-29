@@ -1,12 +1,17 @@
     
-def import_to_db(filepath):
+# def import_to_db(rentals_filepath, schools_filepath):
+def import_to_db():
 # Function to import data from a csv file into a database.
+    # %%
+    # Set filepath to the csv files to be imported
+    # Used for testing
+    rentals_filepath = '../backend/rentals_with_schools.csv'
+    schools_filepath = '../backend/big_list_of_schools.csv'
 
     # %%
     #import pandas
     import pandas as pd
     import ast
-    import matplotlib.pyplot as plt
     import json
 
     # Import SQLAlchemy 
@@ -16,13 +21,13 @@ def import_to_db(filepath):
     # %%
     # Load in rentals_with_schools.csv as a dataframe
 
-    rentals_with_schools = pd.read_csv(filepath)
+    rentals_with_schools = pd.read_csv(rentals_filepath)
 
     # %%
     #Take a peek at the results
-    rentals_with_schools.head()
-
-    rentals_with_schools.columns
+    # Testing
+    # rentals_with_schools.head()
+    # rentals_with_schools.columns
 
     # %%
 
@@ -85,7 +90,7 @@ def import_to_db(filepath):
             if tag is not None and tag not in unique_tags:
                 unique_tags.append(tag)
 
-    print (unique_tags)
+    # print (unique_tags)
 
     # %%
 
@@ -110,7 +115,8 @@ def import_to_db(filepath):
 
         for tag in tags:
             if tag is not None:
-                rentals_base_table[tag][row['listing_id']] = 1
+                # rentals_base_table[tag][row['listing_id']] = 1
+                rentals_base_table.loc[row['listing_id'], tag] = 1
 
 
     # %%
@@ -136,7 +142,7 @@ def import_to_db(filepath):
     # Next lets add in all the columns into the rentals_base_table dataframe.
                 
     for value in unique_description_value:
-        rentals_base_table[value] = 0
+        rentals_base_table[value] = None
 
     # %%
         
@@ -150,13 +156,13 @@ def import_to_db(filepath):
 
         for value in description_values:
             if value is not None:
-                rentals_base_table[value][row['listing_id']] = description_values[value]
-
+                # rentals_base_table[value][row['listing_id']] = description_values[value]
+                rentals_base_table.loc[row['listing_id'], value] = description_values[value]
     # %%
 
     # Read in big_list_of_schools.csv into a dataframe
 
-    big_list_of_schools = pd.read_csv('./backend/big_list_of_schools.csv')
+    big_list_of_schools = pd.read_csv(schools_filepath)
 
     # Set the index to slug_id
     big_list_of_schools.set_index('slug_id', inplace=True)
@@ -179,17 +185,33 @@ def import_to_db(filepath):
 
     # %%
 
-    # Match on the listing_id from rentals_with_schools
-    rentals_base_table['school_ids'] = rentals_with_schools.set_index('listing_id')['school_ids']
-    rentals_base_table['elementary_school_rating'] = ''
-    rentals_base_table['middle_school_rating'] = ''
-    rentals_base_table['high_school_rating'] = ''
+    # Match on the listing_id and copy the school_ids over from rentals_with_schools
+    rentals_base_table['school_ids'] = None
+    
+    for i, row in rentals_with_schools.iterrows():
+        try:
+            school_ids = ast.literal_eval(row['school_ids'])
+        except:
+            school_ids = []
+
+        rentals_base_table.loc[row['listing_id'],'school_ids'] = str(school_ids)
+
+
+    # %%
+    # Add in three columns called 'elementary school rating', 'middle school rating', and 'high school rating' to the rentals_base_table dataframe.
+    rentals_base_table['elementary_school_rating'] = 0
+    rentals_base_table['middle_school_rating'] = 0
+    rentals_base_table['high_school_rating'] = 0
 
     # %%
 
 
     # Add in three columns called 'elementary school rating', 'middle school rating', and 'high school rating' to the rentals_base_table dataframe.
     # Match on the school slig_id stored in the rentals_with_schools dataframe.
+
+    elementary_school_rating = []
+    middle_school_rating = []
+    high_school_rating = []
 
     for i, row in rentals_with_schools.iterrows():
         try:
@@ -200,11 +222,16 @@ def import_to_db(filepath):
         #print(school_slugs)
         for school_slug in school_slugs:
             if school_slug is not None:
-                #print(school_slug)
-                rentals_base_table['elementary_school_rating'][row['listing_id']] = big_list_of_schools.loc[str(school_slug)]['elementary_school_rating']
-                rentals_base_table['middle_school_rating'][row['listing_id']] = big_list_of_schools.loc[str(school_slug)]['middle_school_rating']
-                rentals_base_table['high_school_rating'][row['listing_id']] = big_list_of_schools.loc[str(school_slug)]['high_school_rating']
+                #Append the rating for each school to the list
+                elementary_school_rating.append(big_list_of_schools.loc[str(school_slug)]['elementary_school_rating'])
+                middle_school_rating.append(big_list_of_schools.loc[str(school_slug)]['middle_school_rating'])
+                high_school_rating.append(big_list_of_schools.loc[str(school_slug)]['high_school_rating'])
 
+        # Take the max value from each list and append to new columns in the rentals_base_table dataframe.
+        rentals_base_table.loc[row['listing_id'], 'elementary_school_rating'] = max(elementary_school_rating)
+        rentals_base_table.loc[row['listing_id'],'middle_school_rating'] = max(middle_school_rating)
+        rentals_base_table.loc[row['listing_id'], 'high_school_rating'] = max(high_school_rating)
+        
     # %%
                 
     # Loop through the columns
@@ -224,7 +251,7 @@ def import_to_db(filepath):
 
     # %%
     # Export the rentals_base_table dataframe to a csv file
-    rentals_base_table.to_csv('./data_work/rentals_base_table.csv')
+    rentals_base_table.to_csv('../data_work/rentals_base_table.csv')
 
     # %%
     # Save to a database.

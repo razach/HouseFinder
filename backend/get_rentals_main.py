@@ -74,6 +74,9 @@ def get_rentals():
                 
                 # Filter schools_df to only include current unique row
                 new_df = schools_df[schools_df.index == slug_id]
+
+                #Drop the column 'distance_in_miles'
+                new_df = new_df.drop(columns=['distance_in_miles'])
                 
                 # Append unique row to big_list_of_schools
                 big_list_of_schools = pd.concat([big_list_of_schools, new_df])
