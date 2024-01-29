@@ -252,13 +252,13 @@ def import_to_db(rentals_filepath, schools_filepath):
 
     # %%
     # Export the rentals_base_table dataframe to a csv file
-    rentals_base_table.to_csv('../data_work/rentals_base_table.csv')
+    rentals_base_table.to_csv('./data_work/rentals_base_table.csv')
 
     # %%
     # Save to a database.
 
-    # Create SQLAlchemy engine to connect to SQLite database
-    engine = sqlalchemy.create_engine('sqlite:///rentals.db')
+    # Create SQLAlchemy engine to connect to SQLite database. Save the data based to ./data_work/rentals
+    engine = sqlalchemy.create_engine('sqlite:///data_work/rentals.db')
 
     # Save rentals_base_table to SQLite database 
     rentals_base_table.to_sql('rentals', engine, if_exists='replace', index=True)
