@@ -1,12 +1,13 @@
     
 # def import_to_db(rentals_filepath, schools_filepath):
-def import_to_db():
+def import_to_db(rentals_filepath, schools_filepath):
+
 # Function to import data from a csv file into a database.
     # %%
     # Set filepath to the csv files to be imported
     # Used for testing
-    rentals_filepath = '../backend/rentals_with_schools.csv'
-    schools_filepath = '../backend/big_list_of_schools.csv'
+    # rentals_filepath = '../backend/rentals_with_schools.csv'
+    # schools_filepath = '../backend/big_list_of_schools.csv'
 
     # %%
     #import pandas
